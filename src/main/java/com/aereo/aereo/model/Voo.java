@@ -21,5 +21,4 @@ public class Voo {
     @Temporal(TemporalType.TIMESTAMP)
     private Date dataEHora;
 
-
 }

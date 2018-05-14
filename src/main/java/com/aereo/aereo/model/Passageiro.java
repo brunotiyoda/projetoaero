@@ -75,4 +75,12 @@ public class Passageiro {
     public void setTelefone(String telefone) {
         this.telefone = telefone;
     }
+
+    public Voo getVoo() {
+        return voo;
+    }
+
+    public void setVoo(Voo voo) {
+        this.voo = voo;
+    }
 }

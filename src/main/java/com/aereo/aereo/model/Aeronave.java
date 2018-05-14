@@ -19,15 +19,7 @@ public class Aeronave {
 
     private int poltronasOcupadas;
 
-    public Aeronave() {
-    }
-
-    public Aeronave(String nome, int capacidadePassageiro, int poltronasVagas, int poltronasOcupadas) {
-        this.nome = nome;
-        this.capacidadePassageiro = capacidadePassageiro;
-        this.poltronasVagas = poltronasVagas;
-        this.poltronasOcupadas = poltronasOcupadas;
-    }
+    private String nomeDaPoltrona;
 
     public int getId() {
         return id;
@@ -67,5 +59,21 @@ public class Aeronave {
 
     public void poltronasOcupadas(int poltronasOcupadas) {
         this.poltronasOcupadas = poltronasOcupadas;
+    }
+
+    public int getPoltronasOcupadas() {
+        return poltronasOcupadas;
+    }
+
+    public void setPoltronasOcupadas(int poltronasOcupadas) {
+        this.poltronasOcupadas = poltronasOcupadas;
+    }
+
+    public String getNomeDaPoltrona() {
+        return nomeDaPoltrona;
+    }
+
+    public void setNomeDaPoltrona(String nomeDaPoltrona) {
+        this.nomeDaPoltrona = nomeDaPoltrona;
     }
 }

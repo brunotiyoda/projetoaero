@@ -1,4 +1,4 @@
-package com.aereo.aereo;
+package com.aereo.aereo.tests;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;

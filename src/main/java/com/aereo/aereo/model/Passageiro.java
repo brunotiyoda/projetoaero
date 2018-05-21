@@ -25,7 +25,7 @@ public class Passageiro {
     @Column(nullable = false, length = 15)
     private String telefone;
 
-    @ManyToOne
+    @ManyToMany
     private Voo voo;
 
     public int getId() {

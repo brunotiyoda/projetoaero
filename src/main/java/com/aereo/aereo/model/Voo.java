@@ -28,6 +28,9 @@ public class Voo {
     @ManyToOne
     private Aeronave aeronave;
 
+    @ManyToMany
+    private Passageiro passageiro;
+
 
     public int getId() {
         return id;
@@ -83,5 +86,13 @@ public class Voo {
 
     public void setAeronave(Aeronave aeronave) {
         this.aeronave = aeronave;
+    }
+
+    public Passageiro getPassageiro() {
+        return passageiro;
+    }
+
+    public void setPassageiro(Passageiro passageiro) {
+        this.passageiro = passageiro;
     }
 }

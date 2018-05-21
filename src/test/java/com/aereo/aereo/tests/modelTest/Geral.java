@@ -53,18 +53,18 @@ public class Geral {
         voo.setNumeroVoo(4609);
         voo.setAeronave(aeronave);
 
-        bruno.setVoo(voo);
+//        bruno.setVoo(voo);
 
         List<Passageiro> quantidadePassageiros = new ArrayList<>();
 
         quantidadePassageiros.add(bruno);
 
-        voo.setQuantidadePassageirosNoVoo(quantidadePassageiros);
+//        voo.setQuantidadePassageirosNoVoo(quantidadePassageiros);
 
         aeronave.setPoltronasVagas(aeronave.getPoltronasVagas() - quantidadePassageiros.size());
 
         System.out.println("numero voo...................: " + voo.getNumeroVoo());
-        System.out.println("quantidade passageiros no voo: " + voo.getQuantidadePassageirosNoVoo().size());
+//        System.out.println("quantidade passageiros no voo: " + voo.getQuantidadePassageirosNoVoo().size());
         System.out.println("nome aeronave................: " + voo.getAeronave().getNome());
         System.out.println("capacidade para passageiros..: " + voo.getAeronave().getCapacidadePassageiro());
         System.out.println("poltronas vagas..............: " + voo.getAeronave().getPoltronasVagas());

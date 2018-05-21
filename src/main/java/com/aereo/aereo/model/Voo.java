@@ -23,14 +23,14 @@ public class Voo {
     @Temporal(TemporalType.TIMESTAMP)
     private Date dataEHora;
 
-    private List<Passageiro> quantidadePassageirosNoVoo = new ArrayList<>();
-
     @ManyToOne
     private Aeronave aeronave;
 
     @ManyToMany
-    private Passageiro passageiro;
+    private List<Passageiro> passageiros;
 
+    @ManyToMany
+    private List<Conexao> conexoes;
 
     public int getId() {
         return id;
@@ -72,14 +72,6 @@ public class Voo {
         this.dataEHora = dataEHora;
     }
 
-    public List<Passageiro> getQuantidadePassageirosNoVoo() {
-        return quantidadePassageirosNoVoo;
-    }
-
-    public void setQuantidadePassageirosNoVoo(List<Passageiro> quantidadePassageirosNoVoo) {
-        this.quantidadePassageirosNoVoo = quantidadePassageirosNoVoo;
-    }
-
     public Aeronave getAeronave() {
         return aeronave;
     }
@@ -88,11 +80,19 @@ public class Voo {
         this.aeronave = aeronave;
     }
 
-    public Passageiro getPassageiro() {
-        return passageiro;
+    public List<Passageiro> getPassageiros() {
+        return passageiros;
     }
 
-    public void setPassageiro(Passageiro passageiro) {
-        this.passageiro = passageiro;
+    public void setPassageiros(List<Passageiro> passageiros) {
+        this.passageiros = passageiros;
+    }
+
+    public List<Conexao> getConexoes() {
+        return conexoes;
+    }
+
+    public void setConexoes(List<Conexao> conexoes) {
+        this.conexoes = conexoes;
     }
 }

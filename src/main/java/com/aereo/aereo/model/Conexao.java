@@ -12,8 +12,21 @@ public class Conexao {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
 
-    private Voo voo;
-
     private String cidadeConexao;
 
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public String getCidadeConexao() {
+        return cidadeConexao;
+    }
+
+    public void setCidadeConexao(String cidadeConexao) {
+        this.cidadeConexao = cidadeConexao;
+    }
 }

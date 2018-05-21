@@ -25,9 +25,6 @@ public class Passageiro {
     @Column(nullable = false, length = 15)
     private String telefone;
 
-    @ManyToMany
-    private Voo voo;
-
     public int getId() {
         return id;
     }
@@ -76,11 +73,4 @@ public class Passageiro {
         this.telefone = telefone;
     }
 
-    public Voo getVoo() {
-        return voo;
-    }
-
-    public void setVoo(Voo voo) {
-        this.voo = voo;
-    }
 }

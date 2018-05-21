@@ -1,0 +1,9 @@
+package com.aereo.aereo.dao;
+
+import com.aereo.aereo.arquitetura.dao.GenericDAO;
+import com.aereo.aereo.model.Passageiro;
+import org.springframework.stereotype.Repository;
+
+@Repository
+public class PassageiroDAO extends GenericDAO<Passageiro> {
+}

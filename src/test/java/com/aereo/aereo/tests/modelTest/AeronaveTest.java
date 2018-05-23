@@ -37,7 +37,7 @@ public class AeronaveTest {
         aeronave.poltronasOcupadas(0);
         aeronave.setPoltronasVagas(230);*/
 
-//        Aeronave aeronave = new Aeronave("BOING 777", 230, 230, 0);
+        //Aeronave aeronave = new Aeronave("BOING 777", 230, 230, 0);
 
         System.out.println(aeronave.getNome());
     }

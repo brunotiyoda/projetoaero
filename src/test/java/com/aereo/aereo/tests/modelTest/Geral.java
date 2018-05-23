@@ -55,12 +55,17 @@ public class Geral {
 
 //        bruno.setVoo(voo);
 
+
         List<Passageiro> quantidadePassageiros = new ArrayList<>();
 
         quantidadePassageiros.add(bruno);
+        quantidadePassageiros.add(patrick);
+        quantidadePassageiros.add(marcia);
+        quantidadePassageiros.add(fabio);
 
 //        voo.setQuantidadePassageirosNoVoo(quantidadePassageiros);
 
+        //A quantidade de poltranas vagas para o voo é dada pela quantidade de poltranas - a quantidade de passageiros
         aeronave.setPoltronasVagas(aeronave.getPoltronasVagas() - quantidadePassageiros.size());
 
         System.out.println("numero voo...................: " + voo.getNumeroVoo());
@@ -70,7 +75,6 @@ public class Geral {
         System.out.println("poltronas vagas..............: " + voo.getAeronave().getPoltronasVagas());
         System.out.println("origem.......................: " + voo.getCidadeDePartida());
         System.out.println("destino......................: " + voo.getCidadeDeDestino());
-
 
     }
 

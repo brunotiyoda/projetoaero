@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-br" ng-app="clienteApp">
+<head>
+    <meta charset="UTF-8">
+    <title>Área Cliente</title>
+
+    <!-- AngularJS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.10/angular.min.js"></script>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css"
+          integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+
+
+    <script src="cliente-controller.js"></script>
+
+</head>
+<body>
+
+<div class="container">
+    <div class="container-fluid" ng-controller="clienteController">
+        <h1>Bem-vindo</h1>
+
+        <!--<table class="table table-striped">
+            <thead>
+            <tr class="text-center">
+                <td ng-repeat="coluna in colunas">
+                    {{linha + coluna}}
+                </td>
+            </tr>
+            </thead>
+
+            <tbody>
+            <tr ng-repeat="acento in acentos">
+                <td>{{acento}}</td>
+            </tr>
+            </tbody>
+        </table>-->
+        <table>
+            <tr ng-repeat="linha in acentos">
+                <td >
+                    {{linha + coluna}}
+                </td>
+            </tr>
+        </table>
+
+        <table>
+            <tr ng-repeat="linha in linhas">
+                <td ng-repeat="coluna in colunas">
+                    {{linha + coluna}}
+                </td>
+            </tr>
+        </table>
+
+    </div>
+
+
+</div>
+
+<!-- Bootstrap -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"
+        integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ"
+        crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"
+        integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm"
+        crossorigin="anonymous"></script>
+</body>
+</body>
+</html>

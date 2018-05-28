@@ -1,4 +1,4 @@
-angular.module('colapp').controller('AeronaveController', function ($scope, $http) {
+angular.module('bisc').controller('AeronaveController', function ($scope, $http) {
 
     console.log("AeroContro");
 

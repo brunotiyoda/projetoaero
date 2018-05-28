@@ -8,8 +8,8 @@ angular.module('bisc', ['ngRoute', 'ngAnimate'])
                 controller: 'PesquisaAeronaveController'
             })
             .when('/cadastro/aeronave', {
-                templateUrl: 'pesquisar_aeronave.html',
-                controller: 'AeronaveController'
+                templateUrl: '/colaborador/cadastro_aeronave.html',
+                controller: 'CadastroAeronaveController'
             });
 
         //$locationProvider.html5Mode(true);

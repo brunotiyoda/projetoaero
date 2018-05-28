@@ -1,4 +1,4 @@
-angular.module('clienteApp',[]).controller('clienteController', function ($scope) {
+angular.module('clienteApp',[]).controller('ClienteController', function ($scope) {
 
 
     $scope.acentos = [];

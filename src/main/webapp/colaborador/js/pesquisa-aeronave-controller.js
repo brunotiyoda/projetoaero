@@ -1,4 +1,4 @@
-angular.module('bisc',[]).controller('CadastroAeronaveController', function ($scope, $http) {
+angular.module('bisc',[]).controller('PesquisaAeronaveController', function ($scope, $http) {
 
     console.log("AeroContro");
 

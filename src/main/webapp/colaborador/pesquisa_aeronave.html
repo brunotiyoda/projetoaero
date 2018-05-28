@@ -10,7 +10,7 @@
         <div class="col-lg-6">
             <div class="input-group">
                 <span class="input-group-btn">
-                    <a href="/#!/cadastro/cidade" class="btn btn-default">
+                    <a href="#!/cadastro/aeronave" class="btn btn-default">
                         Novo
                     </a>
                 </span>
@@ -22,17 +22,13 @@
     <table class="table">
         <thead class="thead-light">
         <tr>
-            <th scope="col">Cidade</th>
-            <th scope="col">Estado</th>
-            <th scope="col">UF</th>
-            <th scope="col">Ação</th>
+            <th scope="col">ID</th>
+            <th scope="col">Aeronave</th>
         </tr>
         </thead>
         <tbody>
         <tr scope="row" ng-repeat="cidade in cidades | filter: filtro">
             <td>{{cidade.cidade}}</td>
-            <td>{{cidade.estado.estado}}</td>
-            <td>{{cidade.estado.uf}}</td>
             <td>
                 <div class="btn-group" role="group">
                     <button type="button" class="btn btn-primary">Editar</button>

@@ -1,6 +1,4 @@
-'use strict';
-
-angular.module('bisc', ['ngRoute', 'ngAnimate'])
+angular.module('colaborador', ['ngRoute'])
     .config(function ($routeProvider, $locationProvider) {
         $routeProvider
             .when('/pesquisa/aeronave', {

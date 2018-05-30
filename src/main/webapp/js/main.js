@@ -2,7 +2,7 @@ angular.module('colaborador', ['ngRoute'])
     .config(function ($routeProvider, $locationProvider) {
         $routeProvider
             .when('/pesquisa/aeronave', {
-                templateUrl: '/colaborador/pesquisar_aeronave.html',
+                templateUrl: '/colaborador/pesquisa_aeronave.html',
                 controller: 'PesquisaAeronaveController'
             })
             .when('/cadastro/aeronave', {

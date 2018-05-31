@@ -1,6 +1,10 @@
 angular.module('colaborador', ['ngRoute'])
-    .config(function ($routeProvider, $locationProvider) {
+    .config(function ($routeProvider) {
         $routeProvider
+            .when('/', {
+                templateUrl: 'colaborador/dashboardtest.html',
+                controller: 'DashboardTest'
+            })
             .when('/pesquisa/aeronave', {
                 templateUrl: '/colaborador/pesquisa_aeronave.html',
                 controller: 'PesquisaAeronaveController'
@@ -10,5 +14,5 @@ angular.module('colaborador', ['ngRoute'])
                 controller: 'CadastroAeronaveController'
             });
 
-        //$locationProvider.html5Mode(true);
+        $routeProvider.otherwise({redirectTo: '/fotos'});
     });

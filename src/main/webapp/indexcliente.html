@@ -20,21 +20,21 @@
 
 <div class="container">
     <!-- Menu -->
-    <nav class="navbar navbar-light bg-light">
-        <div class="container-fluid">
-            <div class="navbar-header">
-                <a class="navbar-brand" href="#">Latão</a>
-            </div>
-            <ul class="nav navbar-nav">
-                <li class="active"><a href="#">Home</a></li>
-                <li><a href="#!pesquisa/passagem">Passagem</a></li>
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="#">Latão, é nois que voa bixao</a>
+        </div>
+        <div class="row">
+            <ul class="col-3">
+                <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+                    <a class="nav-link active" data-toggle="pill" role="tab" href="#" aria-selected="true">Home</a>
+                    <a class="nav-link" data-toggle="pill" href="#!pesquisa/passagem" aria-selected="false">Passagem</a>
+                </div>
             </ul>
         </div>
-    </nav>
-
-    <div class="container-fluid">
         <div ng-view></div>
     </div>
+
 </div>
 
 <!-- Bootstrap -->

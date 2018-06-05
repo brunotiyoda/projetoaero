@@ -26,20 +26,17 @@
 
 <div class="container">
     <!-- Menu -->
-    <nav class="navbar navbar-light bg-light">
-        <div class="container-fluid">
-            <div class="navbar-header">
-                <a class="navbar-brand" href="#">Latão</a>
-            </div>
-            <ul class="nav navbar-nav">
-                <li class="active"><a href="#">Home</a></li>
-                <li><a href="#!pesquisa/aeronave">Aeronave</a></li>
-                <li><a href="#!pesquisa/voo">Vôo</a></li>
-            </ul>
-        </div>
-    </nav>
-
     <div class="container-fluid">
+        <a class="navbar-brand" href="#">Latão</a>
+        <div class="row">
+            <div class="col-3">
+                <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+                    <a class="nav-link active" data-toggle="pill" role="tab" href="#" aria-selected="true">Home</a>
+                    <a class="nav-link" data-toggle="pill" href="#!pesquisa/aeronave" aria-selected="false">Aeronave</a>
+                    <a class="nav-link" data-toggle="pill" href="#!pesquisa/voo" aria-selected="false">Vôo</a>
+                </div>
+            </div>
+        </div>
         <div ng-view></div>
     </div>
 </div>

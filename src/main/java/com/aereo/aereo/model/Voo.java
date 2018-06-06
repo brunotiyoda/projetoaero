@@ -20,17 +20,16 @@ public class Voo {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private int numeroVoo;
 
-    @Temporal(TemporalType.TIMESTAMP)
-    private Date dataEHora;
+    private String dataEHora;
 
     @ManyToOne
     private Aeronave aeronave;
 
-    @ManyToMany
+    @ManyToMany(fetch = FetchType.EAGER)
     private List<Passageiro> passageiros;
 
-    @ManyToMany
-    private List<Conexao> conexoes;
+   /* @ManyToMany
+    private List<Conexao> conexoes;*/
 
     public int getId() {
         return id;
@@ -64,11 +63,7 @@ public class Voo {
         this.numeroVoo = numeroVoo;
     }
 
-    public Date getDataEHora() {
-        return dataEHora;
-    }
-
-    public void setDataEHora(Date dataEHora) {
+    public void setDataEHora(String dataEHora) {
         this.dataEHora = dataEHora;
     }
 
@@ -88,11 +83,11 @@ public class Voo {
         this.passageiros = passageiros;
     }
 
-    public List<Conexao> getConexoes() {
+    /*public List<Conexao> getConexoes() {
         return conexoes;
     }
 
     public void setConexoes(List<Conexao> conexoes) {
         this.conexoes = conexoes;
-    }
+    }*/
 }

@@ -4,12 +4,23 @@ angular.module('colaborador').controller('CadastroVooController', function ($sco
 
     $scope.rota = routeName;
 
-    /*objeto Aeronave*/
+    /*Objeto Voo*/
     $scope.voo = {};
 
     /*Ação de Salvar*/
     $scope.salvar = function () {
-        $http.post('aeronave/salvar', $scope.voo)
+
+        /*Monta o objeto responsável para persistir no backend*/
+        var objSave = {
+            cidadeDePartida: $scope.voo.cidadeDePartida,
+            cidadeDeDestino: $scope.voo.cidadeDeDestino,
+            dataEHora: $scope.voo.dataEHora,
+            aeronave: {
+                id: $scope.aeronaveId
+            }
+        }
+
+        $http.post('/voo/salvar', objSave)
             .then(function (value) {
                 console.log(value);
             })

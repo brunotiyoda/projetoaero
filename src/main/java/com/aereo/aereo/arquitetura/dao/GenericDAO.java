@@ -6,6 +6,8 @@ import org.springframework.transaction.annotation.Transactional;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import javax.persistence.criteria.CriteriaQuery;
+import java.lang.reflect.ParameterizedType;
+import java.lang.reflect.Type;
 import java.util.List;
 
 @Repository
@@ -16,6 +18,15 @@ public abstract class GenericDAO<Entidade> {
 
     @PersistenceContext
     private EntityManager entityManager;
+
+    public GenericDAO() {
+        Type genericSuperClass = getClass().getGenericSuperclass();
+
+        if (genericSuperClass != null && !(genericSuperClass instanceof Class)) {
+            this.entidade = (Class<Entidade>) ((ParameterizedType) genericSuperClass).getActualTypeArguments()[0];
+        }
+    }
+
 
     public Class<Entidade> getEntidade() {
         return entidade;

@@ -16,9 +16,23 @@ angular.module('colaborador').controller('CadastroVooController', function ($sco
             .catch(function (reason) {
                 console.log(reason);
             })
-
-        console.log("Click");
-
     };
+
+    function isConexao($scope) {
+        
+    }
+
+    /*Inicia Página*/
+    function init() {
+        $http.get('/aeronave/listaTodos')
+            .then(function (resposta) {
+                $scope.aeronaves = resposta.data;
+            })
+            .catch(function (erro) {
+                console.log(erro);
+            });
+    }
+
+    init();
 
 });

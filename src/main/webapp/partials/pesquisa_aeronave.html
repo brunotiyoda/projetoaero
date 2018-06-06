@@ -25,13 +25,14 @@
         <tr>
             <th scope="col">ID</th>
             <th scope="col">Aeronave</th>
+            <th scope="col">Capacidade Passageiro</th>
         </tr>
         </thead>
         <tbody>
         <tr scope="row" ng-repeat="aeronave in aeronaves | filter: filtro">
             <td>{{aeronave.id}}</td>
             <td>{{aeronave.nome}}</td>
-
+            <td>{{aeronave.capacidadePassageiro}}</td>
         </tr>
         </tbody>
     </table>

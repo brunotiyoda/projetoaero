@@ -11,7 +11,7 @@
         <div class="col-lg-6">
             <div class="input-group">
                 <span class="input-group-prepend">
-                    <a class="btn btn-outline-secondary" href="#!cadastro/voo">
+                    <a class="btn btn-outline-secondary" href="#!comprar/passagem">
                         Novo
                     </a>
                 </span>
@@ -23,15 +23,14 @@
     <table class="table">
         <thead class="thead-light">
         <tr>
-            <th scope="col">ID</th>
-            <th scope="col">Voo</th>
+            <th scope="col">Nº Passagem</th>
+            <th scope="col">Passageiro</th>
         </tr>
         </thead>
         <tbody>
         <tr scope="row" ng-repeat="passagem in passagens | filter: filtro">
-            <td>{{voo.id}}</td>
-            <td>{{voo.nome}}</td>
-
+            <td>{{passagem.numeroPassagem}}</td>
+            <td>{{passagem.nome}}</td>
         </tr>
         </tbody>
     </table>

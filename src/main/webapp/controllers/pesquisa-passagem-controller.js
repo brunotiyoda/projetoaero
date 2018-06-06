@@ -4,4 +4,11 @@ angular.module('cliente').controller('PesquisaPassagemController',function ($sco
 
     console.log("PesquisaPassagemController");
 
+    /*Inicia a pagina*/
+    function init() {
+
+    };
+
+
+    init();
 });

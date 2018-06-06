@@ -25,6 +25,10 @@ public class Passageiro {
     @Column(nullable = false, length = 15)
     private String telefone;
 
+    @Column(nullable = false)
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private int numeroPassagem;
+
     public int getId() {
         return id;
     }
@@ -73,4 +77,11 @@ public class Passageiro {
         this.telefone = telefone;
     }
 
+    public int getNumeroPassagem() {
+        return numeroPassagem;
+    }
+
+    public void setNumeroPassagem(int numeroPassagem) {
+        this.numeroPassagem = numeroPassagem;
+    }
 }

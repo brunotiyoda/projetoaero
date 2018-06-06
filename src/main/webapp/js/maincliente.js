@@ -9,6 +9,15 @@ angular.module('cliente', ['ngRoute']).config(function ($routeProvider) {
                 }
             }
         })
+        .when('/comprar/passagem', {
+            templateUrl: 'partials/compra-passagem.html',
+            controller: 'ComprarPassagemController',
+            resolve: {
+                routeName: function () {
+                    return "Compra Passagem";
+                }
+            }
+        })
         .when('/', {
             templateUrl: 'partials/main.html',
             controller: 'MainColaboradorController'

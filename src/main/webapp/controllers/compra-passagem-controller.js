@@ -1,11 +1,11 @@
-angular.module('colaborador').controller('ComprarPassagemController', function ($scope, routeName, $http) {
+angular.module('cliente').controller('ComprarPassagemController', function ($scope, routeName, $http) {
 
     console.log("ComprarPassagemController");
 
     $scope.rota = routeName;
 
     /*Objeto Voo*/
-    $scope.voo = {};
+    $scope.passageiro = {};
 
     /*Ação de Salvar*/
     $scope.salvar = function () {

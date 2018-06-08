@@ -1,0 +1,88 @@
+<br><br><br>
+<div>
+    <div class="row">
+        <div class="col-lg-12">
+            <h1 class="page-header">{{rota}}</h1>
+        </div>
+        <!-- /.col-lg-12 -->
+    </div>
+
+    <form name="formCompraPassagem" ng-submit="salvar()">
+        <div class="row">
+            <!--<div class="form-group">
+                <label>Número do Vôo: {{voo.numero}}</label>
+                <input class="form-control" name="numero" ng-model="voo.numero" placeholder="ex: 2406">
+            </div>-->
+        </div>
+        <div class="row">
+            <div class="form-group col-sm-4">
+                <label>Nome Completo:</label>
+                <input class="form-control" name="nome" ng-model="passageiro.nome">
+            </div>
+
+            <div class="form-group col-sm-4">
+                <label>Documento:</label>
+                <input class="form-control" name="documento" ng-model="passageiro.documento">
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="form-group col-sm-4">
+                <label>E-mail:</label>
+                <input class="form-control" name="email" ng-model="passageiro.email">
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="form-group col-sm-4">
+                <label>Telefone:</label>
+                <input class="form-control" name="telefone" ng-model="passageiro.telefone">
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-sm-3">
+                <label for="aeronave">Vôo:</label>
+                <select id="aeronave" class="form-control" ng-model="aeronaveId">
+                    <option
+                            name="estado"
+                            value="{{aeronave.id}}"
+                            ng-repeat="aeronave in aeronaves">
+                        {{aeronave.nome}} - {{aeronave.capacidadePassageiro}}
+                    </option>
+                </select>
+            </div>
+        </div>
+
+        <br>
+        <div class="card" ng-show="passageiro">
+            <div class="card-header">
+                <h4>Passagem</h4>
+            </div>
+            <div class="card-body">
+                <div class="col-sm-2 col-form-label">
+                    <label class="mr-sm-2">Nome Completo: {{passageiro.nome}}</label>
+                    <label class="mr-sm-2">Documento: {{passageiro.documento}}</label>
+                    <label class="mr-sm-2">E-mail: {{passageiro.email}}</label>
+                    <label class="mr-sm-2">Telefone: {{passageiro.telefone}}</label>
+                </div>
+
+                <div class="col-sm-2 col-form-label">
+
+                </div>
+            </div>
+        </div>
+
+        <br>
+        <div class="float-right">
+            <a href="#" class="btn btn-outline-danger" role="button">
+                Voltar
+            </a>
+
+            <button type="submit" class="btn btn-outline-success">
+                Salvar
+            </button>
+        </div>
+    </form>
+
+</div>

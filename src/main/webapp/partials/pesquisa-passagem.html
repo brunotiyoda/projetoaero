@@ -25,12 +25,14 @@
         <tr>
             <th scope="col">Nº Passagem</th>
             <th scope="col">Passageiro</th>
+            <th scope="col">Documento</th>
         </tr>
         </thead>
         <tbody>
         <tr scope="row" ng-repeat="passagem in passagens | filter: filtro">
             <td>{{passagem.numeroPassagem}}</td>
             <td>{{passagem.nome}}</td>
+            <td>{{passagem.documento}}</td>
         </tr>
         </tbody>
     </table>

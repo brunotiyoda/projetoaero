@@ -1,6 +1,7 @@
 package com.aereo.aereo.model;
 
 import javax.persistence.*;
+import java.time.LocalDate;
 import java.util.Date;
 
 @Entity
@@ -15,9 +16,6 @@ public class Passageiro {
 
     @Column(nullable = false, unique = true, length = 18)
     private String documento;
-
-    @Temporal(TemporalType.DATE)
-    private Date dataDaCompra;
 
     @Column(nullable = false, length = 200)
     private String email;
@@ -51,14 +49,6 @@ public class Passageiro {
 
     public void setDocumento(String documento) {
         this.documento = documento;
-    }
-
-    public Date getDataDaCompra() {
-        return dataDaCompra;
-    }
-
-    public void setDataDaCompra(Date dataDaCompra) {
-        this.dataDaCompra = dataDaCompra;
     }
 
     public String getEmail() {

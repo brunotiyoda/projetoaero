@@ -2,6 +2,8 @@ angular.module('cliente').controller('PesquisaPassagemController',function ($sco
 
     $scope.rota = routeName;
 
+    $scope.passagem = {};
+
     console.log("PesquisaPassagemController");
 
     /*Inicia a pagina*/

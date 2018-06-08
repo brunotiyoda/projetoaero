@@ -6,7 +6,7 @@ angular.module('cliente', ['ngRoute']).config(function ($routeProvider) {
             resolve: {
                 routeName: function () {
                     return "Pesquisa Passagem";
-                }
+                } 
             }
         })
         .when('/comprar/passagem', {

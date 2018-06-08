@@ -27,6 +27,8 @@ public class Passageiro {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private int numeroPassagem;
 
+    private String nomeDaPoltrona;
+
     public int getId() {
         return id;
     }

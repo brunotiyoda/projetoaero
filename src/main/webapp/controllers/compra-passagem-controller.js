@@ -4,23 +4,26 @@ angular.module('cliente').controller('ComprarPassagemController', function ($sco
 
     $scope.rota = routeName;
 
-    /*Objeto Voo*/
+    /*Objetos*/
     $scope.passageiro = {};
+
+    $scope.voos = [];
 
     /*Ação de Salvar*/
     $scope.salvar = function () {
 
         /*Monta o objeto responsável para persistir no backend*/
         var objSave = {
-            cidadeDePartida: $scope.voo.cidadeDePartida,
-            cidadeDeDestino: $scope.voo.cidadeDeDestino,
-            dataEHora: $scope.voo.dataEHora,
-            aeronave: {
-                id: $scope.aeronaveId
+            nome: $scope.passageiro.nome,
+            documento: $scope.passageiro.documento,
+            email: $scope.passageiro.email,
+            telefone: $scope.passageiro.telefone,
+            voo: {
+                id: $scope.vooId
             }
         }
 
-        $http.post('/voo/salvar', objSave)
+        $http.post('/passageiro/salvar', objSave)
             .then(function (value) {
                 console.log(value);
             })
@@ -29,15 +32,11 @@ angular.module('cliente').controller('ComprarPassagemController', function ($sco
             })
     };
 
-    function isConexao($scope) {
-
-    }
-
     /*Inicia Página*/
     function init() {
-        $http.get('/aeronave/listaTodos')
+        $http.get('/voo/listaTodos')
             .then(function (resposta) {
-                $scope.aeronaves = resposta.data;
+                $scope.voos = resposta.data;
             })
             .catch(function (erro) {
                 console.log(erro);

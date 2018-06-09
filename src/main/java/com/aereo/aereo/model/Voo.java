@@ -1,8 +1,6 @@
 package com.aereo.aereo.model;
 
 import javax.persistence.*;
-import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
 
 @Entity
@@ -22,14 +20,11 @@ public class Voo {
 
     private String dataEHora;
 
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.EAGER)
     private Aeronave aeronave;
 
-    @ManyToMany(fetch = FetchType.EAGER)
+    @OneToMany(fetch = FetchType.EAGER)
     private List<Passageiro> passageiros;
-
-   /* @ManyToMany
-    private List<Conexao> conexoes;*/
 
     public int getId() {
         return id;
@@ -63,6 +58,10 @@ public class Voo {
         this.numeroVoo = numeroVoo;
     }
 
+    public String getDataEHora() {
+        return dataEHora;
+    }
+
     public void setDataEHora(String dataEHora) {
         this.dataEHora = dataEHora;
     }
@@ -82,12 +81,4 @@ public class Voo {
     public void setPassageiros(List<Passageiro> passageiros) {
         this.passageiros = passageiros;
     }
-
-    /*public List<Conexao> getConexoes() {
-        return conexoes;
-    }
-
-    public void setConexoes(List<Conexao> conexoes) {
-        this.conexoes = conexoes;
-    }*/
 }

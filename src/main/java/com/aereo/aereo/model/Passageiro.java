@@ -1,8 +1,6 @@
 package com.aereo.aereo.model;
 
 import javax.persistence.*;
-import java.time.LocalDate;
-import java.util.Date;
 
 @Entity
 public class Passageiro {
@@ -27,7 +25,8 @@ public class Passageiro {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private int numeroPassagem;
 
-    private String nomeDaPoltrona;
+    @ManyToOne
+    private Voo voo;
 
     public int getId() {
         return id;
@@ -75,5 +74,13 @@ public class Passageiro {
 
     public void setNumeroPassagem(int numeroPassagem) {
         this.numeroPassagem = numeroPassagem;
+    }
+
+    public Voo getVoo() {
+        return voo;
+    }
+
+    public void setVoo(Voo voo) {
+        this.voo = voo;
     }
 }

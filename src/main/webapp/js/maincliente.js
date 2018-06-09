@@ -17,9 +17,5 @@ angular.module('cliente', ['ngRoute']).config(function ($routeProvider) {
                     return "Compra Passagem";
                 }
             }
-        })
-        .when('/', {
-            templateUrl: 'partials/main.html',
-            controller: 'MainColaboradorController'
         });
 });

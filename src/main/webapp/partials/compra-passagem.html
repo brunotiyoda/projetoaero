@@ -42,22 +42,22 @@
 
         <div class="row">
             <div class="col-sm-3">
-                <label for="aeronave">Vôo:</label>
-                <select id="aeronave" class="form-control" ng-model="aeronaveId">
+                <label for="voo">Vôo:</label>
+                <select id="voo" class="form-control" ng-model="vooId">
                     <option
-                            name="estado"
-                            value="{{aeronave.id}}"
-                            ng-repeat="aeronave in aeronaves">
-                        {{aeronave.nome}} - {{aeronave.capacidadePassageiro}}
+                            name="voo"
+                            value="{{voo.id}}"
+                            ng-repeat="voo in voos">
+                        {{voo.numeroVoo}} - {{voo.aeronave.nome}} - {{voo.aeronave.capacidadePassageiro}}
                     </option>
                 </select>
             </div>
         </div>
 
         <br>
-        <div class="card" ng-show="passageiro">
+        <div class="card" ng-show="passageiro.nome != null">
             <div class="card-header">
-                <h4>Passagem</h4>
+                <h4>Passagem <h2 ng-show="passageiro.telefone != null"> para o inferno, viu!?</h2> </h4>
             </div>
             <div class="card-body">
                 <div class="col-sm-2 col-form-label">
@@ -68,7 +68,7 @@
                 </div>
 
                 <div class="col-sm-2 col-form-label">
-
+                    <label class="mr-sm-2">Número do Vôo: {{voo.numeroVoo}}</label>
                 </div>
             </div>
         </div>

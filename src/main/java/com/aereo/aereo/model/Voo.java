@@ -1,3 +1,6 @@
+/**
+ * Entidade responsável por descrever um vôo
+ * */
 package com.aereo.aereo.model;
 
 import javax.persistence.*;
@@ -6,23 +9,47 @@ import java.util.List;
 @Entity
 public class Voo {
 
+    /**
+     * Identificador do vôo. Não diz respeito ao NÚMERO do vôo.
+     * */
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
 
+    /**
+     * Informa a cidade de Origiem, Partida do Vôo
+     * */
     private String cidadeDePartida;
 
+    /**
+     * Informa a cidade Destino, Chegada do Võo
+     * */
     private String cidadeDeDestino;
 
+    /**
+     * Número do Vôo, ex: 4906
+     * Gerado automáticamento pelo Generated Value
+     * */
     @Column(nullable = false)
     @GeneratedValue(strategy = GenerationType.AUTO)
     private int numeroVoo;
 
+    /**
+     * Informa data e hora do Vôo
+     *
+     * Evolução FUTURA
+     * Alterar o campo para LocalDate do Java 8
+     * */
     private String dataEHora;
 
+    /**
+     * Lê-se N - 1
+     * Uma (1) Aeronave pode fazer (N) Vôos
+     * */
     @ManyToOne(fetch = FetchType.EAGER)
     private Aeronave aeronave;
 
+    /***/
     @OneToMany(fetch = FetchType.EAGER)
     private List<Passageiro> passageiros;
 

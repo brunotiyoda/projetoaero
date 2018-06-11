@@ -1,3 +1,9 @@
+/**
+ * Pela descrição da Arquitetura, o GenericDAO é uma camada de Persistencia, ou seja,
+ * inserção de dados e comuniação com o Banco de Dados.
+ *
+ * O Responsável por ajudar é o Entity Manager.
+ * */
 package com.aereo.aereo.arquitetura.dao;
 
 import org.springframework.stereotype.Repository;

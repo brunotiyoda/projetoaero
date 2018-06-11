@@ -45,4 +45,6 @@ angular.module('cliente').controller('ComprarPassagemController', function ($sco
 
     init();
 
+    console.log(    $scope.voo
+    );
 });

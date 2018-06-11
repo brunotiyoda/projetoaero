@@ -1,4 +1,4 @@
-angular.module(`colaborador`, ['ngRoute']).config(function ($routeProvider) {
+angular.module('colaborador', ['ngRoute']).config(function ($routeProvider) {
 
     $routeProvider
         .when('/pesquisa/aeronave',{

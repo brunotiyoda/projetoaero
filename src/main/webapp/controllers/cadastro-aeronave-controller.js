@@ -13,6 +13,7 @@ angular.module('colaborador').controller('CadastroAeronaveController', function 
         $http.post('/aeronave/salvar', $scope.aeronave)
             .then(function (value) {
                 console.log(value);
+                $scope.aeronave = {};
             })
             .catch(function (reason) {
                 console.log(reason);

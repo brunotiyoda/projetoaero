@@ -43,13 +43,17 @@ public class Voo {
     private String dataEHora;
 
     /**
-     * Lê-se N - 1
+     * Lê-se N para 1
      * Uma (1) Aeronave pode fazer (N) Vôos
+     * Vários (N) Vôos são feitos por uma (1) Aeronave
      * */
     @ManyToOne(fetch = FetchType.EAGER)
     private Aeronave aeronave;
 
-    /***/
+    /**
+     * Lê-se 1 para N
+     * Um (1) Vôo pode ter vários (N) Passageiros
+     * */
     @OneToMany(fetch = FetchType.EAGER)
     private List<Passageiro> passageiros;
 

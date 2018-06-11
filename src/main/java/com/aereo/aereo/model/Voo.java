@@ -28,7 +28,7 @@ public class Voo {
 
     /**
      * Número do Vôo, ex: 4906
-     * Gerado automáticamento pelo Generated Value
+     * Gerado automáticamento pelo Generated Value Generation Type = AUTO. Consulte a documentação para mais informações.
      * */
     @Column(nullable = false)
     @GeneratedValue(strategy = GenerationType.AUTO)

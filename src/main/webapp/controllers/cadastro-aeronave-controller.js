@@ -2,6 +2,7 @@ angular.module('colaborador').controller('CadastroAeronaveController', function 
 
     console.log("CadastroAeronaveController");
 
+    /*Nome da rota*/
     $scope.rota = routeName;
 
     /*objeto Aeronave*/
@@ -9,16 +10,16 @@ angular.module('colaborador').controller('CadastroAeronaveController', function 
 
     /*Ação de Salvar*/
     $scope.salvar = function () {
-        $http.post('aeronave/salvar', $scope.aeronave)
+        $http.post('/aeronave/salvar', $scope.aeronave)
             .then(function (value) {
                 console.log(value);
+                $scope.aeronave = {};
             })
             .catch(function (reason) {
                 console.log(reason);
             })
 
-        console.log("Click");
-
+        console.log($scope.aeronave)
     };
 
 });

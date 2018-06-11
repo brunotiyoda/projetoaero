@@ -1,36 +1,61 @@
+/**
+ * Entidade responsável por descrever um vôo
+ * */
 package com.aereo.aereo.model;
 
 import javax.persistence.*;
-import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
 
 @Entity
 public class Voo {
 
+    /**
+     * Identificador do vôo. Não diz respeito ao NÚMERO do vôo.
+     * */
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
 
+    /**
+     * Informa a cidade de Origiem, Partida do Vôo
+     * */
     private String cidadeDePartida;
 
+    /**
+     * Informa a cidade Destino, Chegada do Võo
+     * */
     private String cidadeDeDestino;
 
+    /**
+     * Número do Vôo, ex: 4906
+     * Gerado automáticamento pelo Generated Value Generation Type = AUTO. Consulte a documentação para mais informações.
+     * */
     @Column(nullable = false)
     @GeneratedValue(strategy = GenerationType.AUTO)
     private int numeroVoo;
 
-    @Temporal(TemporalType.TIMESTAMP)
-    private Date dataEHora;
+    /**
+     * Informa data e hora do Vôo
+     *
+     * Evolução FUTURA
+     * Alterar o campo para LocalDate do Java 8
+     * */
+    private String dataEHora;
 
-    @ManyToOne
+    /**
+     * Lê-se N para 1
+     * Uma (1) Aeronave pode fazer (N) Vôos
+     * Vários (N) Vôos são feitos por uma (1) Aeronave
+     * */
+    @ManyToOne(fetch = FetchType.EAGER)
     private Aeronave aeronave;
 
-    @ManyToMany
+    /**
+     * Lê-se 1 para N
+     * Um (1) Vôo pode ter vários (N) Passageiros
+     * */
+    @OneToMany(fetch = FetchType.EAGER)
     private List<Passageiro> passageiros;
-
-    @ManyToMany
-    private List<Conexao> conexoes;
 
     public int getId() {
         return id;
@@ -64,11 +89,11 @@ public class Voo {
         this.numeroVoo = numeroVoo;
     }
 
-    public Date getDataEHora() {
+    public String getDataEHora() {
         return dataEHora;
     }
 
-    public void setDataEHora(Date dataEHora) {
+    public void setDataEHora(String dataEHora) {
         this.dataEHora = dataEHora;
     }
 
@@ -86,13 +111,5 @@ public class Voo {
 
     public void setPassageiros(List<Passageiro> passageiros) {
         this.passageiros = passageiros;
-    }
-
-    public List<Conexao> getConexoes() {
-        return conexoes;
-    }
-
-    public void setConexoes(List<Conexao> conexoes) {
-        this.conexoes = conexoes;
     }
 }

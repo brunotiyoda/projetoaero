@@ -1,3 +1,7 @@
+/**
+ * Pela descrição da Arquitetura, o GenericController é responsável por fazer a comunicação com o Frontend, ou seja,
+ * receber as requisições do Usuário e tratar
+ * */
 package com.aereo.aereo.arquitetura.controller;
 
 import com.aereo.aereo.arquitetura.service.GenericService;

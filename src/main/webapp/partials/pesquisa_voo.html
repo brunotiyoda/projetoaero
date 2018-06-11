@@ -24,14 +24,15 @@
         <thead class="thead-light">
         <tr>
             <th scope="col">ID</th>
-            <th scope="col">Voo</th>
+            <th scope="col">Nº Vôo</th>
+            <th scope="col">Aeronave</th>
         </tr>
         </thead>
         <tbody>
         <tr scope="row" ng-repeat="voo in voos | filter: filtro">
             <td>{{voo.id}}</td>
-            <td>{{voo.nome}}</td>
-
+            <td>{{voo.numeroVoo}}</td>
+            <td>{{voo.aeronave.nome}} - {{voo.aeronave.capacidadePassageiro}}</td>
         </tr>
         </tbody>
     </table>

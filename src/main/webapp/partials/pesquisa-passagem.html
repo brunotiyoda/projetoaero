@@ -1,0 +1,39 @@
+<br><br><br>
+<div>
+    <div class="row">
+        <div class="col-lg-12">
+            <h1 class="page-header">{{rota}}</h1>
+        </div>
+        <!-- /.col-lg-12 -->
+    </div>
+
+    <div class="row">
+        <div class="col-lg-6">
+            <div class="input-group">
+                <span class="input-group-prepend">
+                    <a class="btn btn-outline-secondary" href="#!comprar/passagem">
+                        Novo
+                    </a>
+                </span>
+                <input class="form-control" placeholder="Filtrar" ng-model="filtro" style="text-transform:uppercase">
+            </div>
+        </div>
+    </div>
+
+    <table class="table">
+        <thead class="thead-light">
+        <tr>
+            <th scope="col">Nº Passagem</th>
+            <th scope="col">Passageiro</th>
+            <th scope="col">Documento</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr scope="row" ng-repeat="passagem in passagens | filter: filtro">
+            <td>{{passagem.numeroPassagem}}</td>
+            <td>{{passagem.nome}}</td>
+            <td>{{passagem.documento}}</td>
+        </tr>
+        </tbody>
+    </table>
+</div>

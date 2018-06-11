@@ -1,13 +1,18 @@
 angular.module('colaborador').controller('PesquisaVooController', function ($scope, routeName, $http) {
 
+    console.log("PesquisaVooController");
     $scope.rota = routeName;
 
-    console.log("PesquisaVooController");
-
-    $scope.aeronaves = [];
+    $scope.voos = [];
 
     function init() {
-
+        $http.get('/voo/listaTodos')
+            .then(function (resposta) {
+                $scope.voos = resposta.data;
+            })
+            .catch(function (erro) {
+                console.log(erro);
+            });
     }
 
     init();

@@ -9,20 +9,19 @@
 
     <form name="formCadastroAeronave" ng-submit="salvar()">
         <div class="row">
-            <div class="form-group">
+            <div class="form-group col-sm-4">
                 <label>Nome da Aeronave: {{aeronave.nome}}</label>
                 <input class="form-control" name="nome" ng-model="aeronave.nome" placeholder="ex Boing 777">
             </div>
-        </div>
-        <div class="row">
-            <div class="form-group">
+
+            <div class="form-group col-sm-4">
                 <label>Capacidade Passageiro na Aeronave: {{aeronave.capacidadePassageiro}}</label>
                 <input class="form-control" name="capacidadePassageiro" ng-model="aeronave.capacidadePassageiro" placeholder="248">
             </div>
         </div>
 
-        <div class="row btn-group">
-            <a href="/" class="btn btn-danger" role="button">
+        <div class="float-right">
+            <a href="#" class="btn btn-outline-danger" role="button">
                 Voltar
             </a>
 

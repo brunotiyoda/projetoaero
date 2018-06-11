@@ -1,3 +1,6 @@
+/**
+ * Entidade responsável por descrever uma aeronave (avião)
+ * */
 package com.aereo.aereo.model;
 
 import javax.persistence.*;
@@ -5,21 +8,30 @@ import javax.persistence.*;
 @Entity
 public class Aeronave {
 
+    /**
+     * Identificador da aeronave
+     * */
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
 
+    /**
+     * Nome, apelido da aeronave
+     * */
     @Column(nullable = false, length = 10)
     private String nome;
 
+    /**
+     * Campo que informa a quantidade, capacidade de passageiros na aeronave
+     * */
     @Column(nullable = false)
     private int capacidadePassageiro;
 
+    /**
+     * Evolução FUTURA
+     * Campo que informa a quantidade de poltronas vagas na aeronave
+     * */
     private int poltronasVagas;
-
-    private int poltronasOcupadas;
-
-    private String nomeDaPoltrona;
 
     public int getId() {
         return id;
@@ -53,27 +65,4 @@ public class Aeronave {
         this.poltronasVagas = poltronasVagas;
     }
 
-    public int poltronasOcupadas() {
-        return poltronasOcupadas;
-    }
-
-    public void poltronasOcupadas(int poltronasOcupadas) {
-        this.poltronasOcupadas = poltronasOcupadas;
-    }
-
-    public int getPoltronasOcupadas() {
-        return poltronasOcupadas;
-    }
-
-    public void setPoltronasOcupadas(int poltronasOcupadas) {
-        this.poltronasOcupadas = poltronasOcupadas;
-    }
-
-    public String getNomeDaPoltrona() {
-        return nomeDaPoltrona;
-    }
-
-    public void setNomeDaPoltrona(String nomeDaPoltrona) {
-        this.nomeDaPoltrona = nomeDaPoltrona;
-    }
 }

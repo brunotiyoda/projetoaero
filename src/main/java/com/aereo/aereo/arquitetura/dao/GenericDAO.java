@@ -1,3 +1,9 @@
+/**
+ * Pela descrição da Arquitetura, o GenericDAO é uma camada de Persistencia, ou seja,
+ * inserção de dados e comuniação com o Banco de Dados.
+ *
+ * O Responsável por ajudar é o Entity Manager.
+ * */
 package com.aereo.aereo.arquitetura.dao;
 
 import org.springframework.stereotype.Repository;
@@ -6,6 +12,8 @@ import org.springframework.transaction.annotation.Transactional;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import javax.persistence.criteria.CriteriaQuery;
+import java.lang.reflect.ParameterizedType;
+import java.lang.reflect.Type;
 import java.util.List;
 
 @Repository
@@ -16,6 +24,15 @@ public abstract class GenericDAO<Entidade> {
 
     @PersistenceContext
     private EntityManager entityManager;
+
+    public GenericDAO() {
+        Type genericSuperClass = getClass().getGenericSuperclass();
+
+        if (genericSuperClass != null && !(genericSuperClass instanceof Class)) {
+            this.entidade = (Class<Entidade>) ((ParameterizedType) genericSuperClass).getActualTypeArguments()[0];
+        }
+    }
+
 
     public Class<Entidade> getEntidade() {
         return entidade;
@@ -49,5 +66,6 @@ public abstract class GenericDAO<Entidade> {
 
         return lista;
     }
+
 
 }

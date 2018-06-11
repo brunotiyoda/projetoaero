@@ -1,3 +1,6 @@
+/**
+ * Pela descrição da Arquitetura, o GenericService é responsável por ser a camada de regras de negócio
+ * */
 package com.aereo.aereo.arquitetura.service;
 
 import com.aereo.aereo.arquitetura.dao.GenericDAO;

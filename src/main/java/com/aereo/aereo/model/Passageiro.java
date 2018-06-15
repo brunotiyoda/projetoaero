@@ -58,7 +58,7 @@ public class Passageiro {
      * N para 1
      * Vários (N) Võos podem ser feitos por um (1) Passageiro
      * */
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.EAGER)
     private Voo voo;
 
     public int getId() {

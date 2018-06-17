@@ -26,6 +26,8 @@
             <th scope="col">Nº Passagem</th>
             <th scope="col">Passageiro</th>
             <th scope="col">Documento</th>
+            <th scope="col">Nº Vôo</th>
+            <th scope="col">Aeronave</th>
         </tr>
         </thead>
         <tbody>
@@ -33,6 +35,8 @@
             <td>{{passagem.numeroPassagem}}</td>
             <td>{{passagem.nome}}</td>
             <td>{{passagem.documento}}</td>
+            <td>{{passagem.voo.numeroVoo}}</td>
+            <td>{{passagem.voo.aeronave.nome}}</td>
         </tr>
         </tbody>
     </table>

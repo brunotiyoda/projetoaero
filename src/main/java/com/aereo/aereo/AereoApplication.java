@@ -32,17 +32,17 @@ public class AereoApplication {
         DriverManagerDataSource dataSource = new DriverManagerDataSource();
         dataSource.setUsername("root");
         dataSource.setPassword("q1w2e3r4");
-        dataSource.setUrl("jdbc:mysql://localhost:3306/aereo?useSSL=false");
+        dataSource.setUrl("jdbc:mysql://localhost:3306/aereo?useSSL=true");
         dataSource.setDriverClassName("com.mysql.jdbc.Driver");
 
         factoryBean.setDataSource(dataSource);
 
-        Properties props = new Properties();
-        props.setProperty("hibernate.dialect", "org.hibernate.dialect.MySQL5Dialect");
-        props.setProperty("hibernate.show_sql", "true");
-        props.setProperty("hibernate.hbm2ddl.auto", "update");
+        Properties propriedadesHibernate = new Properties();
+        propriedadesHibernate.setProperty("hibernate.dialect", "org.hibernate.dialect.MySQL5Dialect");
+        propriedadesHibernate.setProperty("hibernate.show_sql", "true");
+        propriedadesHibernate.setProperty("hibernate.hbm2ddl.auto", "update");
 
-        factoryBean.setJpaProperties(props);
+        factoryBean.setJpaProperties(propriedadesHibernate);
 
         factoryBean.setPackagesToScan("com.aereo.aereo.*");
 

@@ -32,7 +32,7 @@ public class AereoApplication {
         DriverManagerDataSource dataSource = new DriverManagerDataSource();
         dataSource.setUsername("root");
         dataSource.setPassword("q1w2e3r4");
-        dataSource.setUrl("jdbc:mysql://localhost:3306/aereo?useSSL=true");
+        dataSource.setUrl("jdbc:mysql://localhost:3306/aereo");
         dataSource.setDriverClassName("com.mysql.jdbc.Driver");
 
         factoryBean.setDataSource(dataSource);

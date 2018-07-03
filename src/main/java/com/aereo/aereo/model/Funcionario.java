@@ -19,7 +19,7 @@ public class Funcionario {
      * Login do Funcionario
      */
     @Column(nullable = false, length = 16)
-    private String documento;
+    private String cpf;
 
     /**
      * Senha do Funcionario
@@ -31,10 +31,6 @@ public class Funcionario {
         return id;
     }
 
-    public void setId(int id) {
-        this.id = id;
-    }
-
     public String getNome() {
         return nome;
     }
@@ -43,12 +39,12 @@ public class Funcionario {
         this.nome = nome;
     }
 
-    public String getDocumento() {
-        return documento;
+    public String getCpf() {
+        return cpf;
     }
 
-    public void setDocumento(String documento) {
-        this.documento = documento;
+    public void setCpf(String cpf) {
+        this.cpf = cpf;
     }
 
     public String getSenha() {

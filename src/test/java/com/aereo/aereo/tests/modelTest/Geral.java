@@ -36,18 +36,14 @@ public class Geral {
 
     @Test
     public void voo4609() {
-        bruno.setId(2406);
         bruno.setNome("Bruno Yudi Tiyoda");
-        bruno.setDocumento("03655597177");
         bruno.setEmail("bruno_tiyoda@hotmail.com");
         bruno.setTelefone("+5562996793516");
 
         aeronave.setNome("Boing 777");
         aeronave.setCapacidadePassageiro(230);
         aeronave.setPoltronasVagas(230);
-        aeronave.setId(159753);
 
-        voo.setId(4609);
         voo.setCidadeDePartida("Goiânia");
         voo.setCidadeDeDestino("São Paulo");
         voo.setNumeroVoo(4609);

@@ -4,6 +4,7 @@
 package com.aereo.aereo.model;
 
 import javax.persistence.*;
+import java.time.LocalDateTime;
 import java.util.List;
 
 @Entity
@@ -40,7 +41,7 @@ public class Voo {
      * Evolução FUTURA
      * Alterar o campo para LocalDate do Java 8
      * */
-    private String dataEHora;
+    private LocalDateTime dataEHora;
 
     /**
      * Lê-se N para 1
@@ -59,10 +60,6 @@ public class Voo {
 
     public int getId() {
         return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
     }
 
     public String getCidadeDePartida() {
@@ -89,11 +86,11 @@ public class Voo {
         this.numeroVoo = numeroVoo;
     }
 
-    public String getDataEHora() {
+    public LocalDateTime getDataEHora() {
         return dataEHora;
     }
 
-    public void setDataEHora(String dataEHora) {
+    public void setDataEHora(LocalDateTime dataEHora) {
         this.dataEHora = dataEHora;
     }
 

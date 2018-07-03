@@ -27,7 +27,7 @@ public class Passageiro {
      * Realizar buscas com informações detalhadas do Passageiro atraves do Documento
      * */
     @Column(nullable = false, unique = true, length = 18)
-    private String documento;
+    private String cpf;
 
     /**
      * E-mail do Passageiro
@@ -65,10 +65,6 @@ public class Passageiro {
         return id;
     }
 
-    public void setId(int id) {
-        this.id = id;
-    }
-
     public String getNome() {
         return nome;
     }
@@ -77,12 +73,12 @@ public class Passageiro {
         this.nome = nome;
     }
 
-    public String getDocumento() {
-        return documento;
+    public String getCpf() {
+        return cpf;
     }
 
-    public void setDocumento(String documento) {
-        this.documento = documento;
+    public void setCpf(String cpf) {
+        this.cpf = cpf;
     }
 
     public String getEmail() {
